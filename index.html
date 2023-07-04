@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="passwordgeeerator.js"></script> -->
+    <style>
+        body{
+            background-color: aqua;
+        }
+        .container{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 50%;
+            height: 50%;
+            border: 1px solid black;
+            background-color: yellow;
+        }
+        input{
+            /* position: absolute; */
+            margin-top: 100px;
+            width: 100%;
+            box-sizing: border-box;
+            height: 50px;
+            word-spacing: 20px;
+            font-size: 30px;
+            text-indent: 190px;
+            pointer-events: none;
+        }
+        .passwordbox{
+            margin: 10px;
+        }
+        .buttons{
+            text-align: center;
+            margin-top: 30px;
+            /* background-color: red; */
+        }
+        button{
+            font-size: 30px;
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+        }
+        #passwordox{
+            letter-spacing:6px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="passwordbox">
+        <input type="text" id="passwordox">
+    </div>
+    <div class="buttons">
+        <button onclick="genrate()">GENERATE</button>
+       
+    </div>
+   </div>
+   <script>
+    function genrate() {
+    let chars = 'abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPqRSTUVWXYZ!@#$^&*';
+    passwordLegth = 10;
+     var password = '';
+    for (var i = 0; i <passwordLegth; i++) {
+        // console.log(i)
+    
+        var random_number = Math.floor(Math.random() * chars.length);
+        console.log(random_number)
+        password += chars.substring(random_number, random_number + 1)
+    
+    }
+   
+    document.getElementById('passwordox').value=password
+}
+   </script>
+</body>
+</html>
