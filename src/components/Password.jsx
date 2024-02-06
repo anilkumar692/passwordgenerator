@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import "../styles/password.css"
 
 
 function Password() {
@@ -37,10 +38,10 @@ function Password() {
     }, [lenn,symbolallowed,numallowed,Password])
 
     return (
-        <div className=' w-full h-screen bg-slate-500 '>
-            <div className=" flex-col justify-center text-center">
+        <div className=' w-full h-screen bg-slate-900 '>
+            <div className="main flex-col justify-center text-center">
                 <div className="heading">
-                    <h1 className=' text-white text-xl'>Password generator</h1>
+                    <h1 className=' heading text-yellow-50  text-4xl gap-y-3 mb-3 '>Password generator</h1>
                 </div>
                 <div className="input">
                     <input className='text-center text-red-500 font-bold text-xl h-14 '
@@ -52,7 +53,7 @@ function Password() {
                         readOnly
 
                     />
-                    <button className=' bg-blue-500 text-white text-xl h-14 p-3'>copy</button>
+                    <button className='copy bg-blue-500 text-white text-xl h-14 p-3  '>copy</button>
                 </div>
                
                      
